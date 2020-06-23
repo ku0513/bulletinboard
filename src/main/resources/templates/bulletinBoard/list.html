@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Users List</title>
@@ -40,7 +40,7 @@ table {
             </form>
         </td>
         <td>
-            <form action="/delete" method="post">
+            <form action="@{/delete}" method="post">
                 <input type="submit" value="削除">
                 <input type="hidden" name="id" th:value="${obj.id}">
             </form>
